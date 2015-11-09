@@ -8,23 +8,25 @@
 
 @foreach (var restaurant in Model.Restaurants)
 {
-    <h3>@restaurant.Name</h3>
-            
-    <dl>
-        <dt>Rated:</dt>
+    <div class="result">
+        <h3>@restaurant.Name</h3>
 
-        @if (restaurant.NumberOfRatings == 1)
-        {
-            <dd>@restaurant.RatingStars stars from @restaurant.NumberOfRatings rating</dd>
-        }
-        else
-        {
-            <dd>@restaurant.RatingStars stars from @restaurant.NumberOfRatings ratings</dd>
-        }
+        <dl>
+            <dt>Rated:</dt>
 
-        <dt>Cuisine Served:</dt>
-        <dd>@String.Join(", ", restaurant.CuisineTypes.Select(type => type.Name))</dd>
-    </dl>
+            @if (restaurant.NumberOfRatings == 1)
+            {
+                <dd>@restaurant.RatingStars stars from @restaurant.NumberOfRatings rating</dd>
+            }
+            else
+            {
+                <dd>@restaurant.RatingStars stars from @restaurant.NumberOfRatings ratings</dd>
+            }
+
+            <dt>Cuisine Served:</dt>
+            <dd>@String.Join(", ", restaurant.CuisineTypes.Select(type => type.Name))</dd>
+        </dl>
+    </div>
 }
 
 @Html.PagedListPager((IPagedList)Model.Restaurants, page => Url.Action("Results", "Home", new { outcode = Model.Outcode, page = page }))
