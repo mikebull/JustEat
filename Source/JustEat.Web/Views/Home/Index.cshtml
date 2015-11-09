@@ -1,0 +1,20 @@
+﻿@model JustEat.Web.ViewModels.RestaurantViewModel
+@{
+    ViewBag.Title = "Search For Restaurants";
+}
+
+<h2>Search For Restaurants</h2>
+
+@using(Html.BeginForm("Index", "Home", FormMethod.Post))
+{
+    <div class="form">
+        
+        @Html.ValidationSummary()
+    
+        @Html.LabelFor(x => x.Outcode, "Enter outcode")
+        @Html.TextBoxFor(x => x.Outcode)
+
+        <input type="submit" value="Search" />
+
+    </div>
+}

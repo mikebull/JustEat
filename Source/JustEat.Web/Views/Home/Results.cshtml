@@ -1,0 +1,18 @@
+﻿@using JustEat.Web.ViewModels
+
+@model RestaurantViewModel
+
+<html>
+<head>
+    <title>Results</title>
+
+    <link href="/Content/PagedList.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div>
+        
+        @Html.Action("RenderResults", "Home", new { model = Model })
+
+    </div>
+</body>
+</html>
