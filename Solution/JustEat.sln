@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JustEat.Web", "..\Source\JustEat.Web\JustEat.Web.csproj", "{DA3BF2C4-0954-4C22-AC93-37717C7D0EFD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JustEat", "..\Source\JustEat\JustEat.csproj", "{485843A1-A8B9-4F39-AD27-35BDB7315E39}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{DA3BF2C4-0954-4C22-AC93-37717C7D0EFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DA3BF2C4-0954-4C22-AC93-37717C7D0EFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DA3BF2C4-0954-4C22-AC93-37717C7D0EFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{485843A1-A8B9-4F39-AD27-35BDB7315E39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{485843A1-A8B9-4F39-AD27-35BDB7315E39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{485843A1-A8B9-4F39-AD27-35BDB7315E39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{485843A1-A8B9-4F39-AD27-35BDB7315E39}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
