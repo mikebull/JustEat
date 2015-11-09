@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using System.Web.Mvc;
 using JustEat.Constants;
-using JustEat.Model;
 using JustEat.Service.Interfaces;
 using JustEat.Web.ViewModels;
-using PagedList;
 
 namespace JustEat.Web.Controllers
 {
@@ -26,7 +22,6 @@ namespace JustEat.Web.Controllers
         /// <summary>
         /// Render initial search page
         /// </summary>
-        /// <param name="viewModel"></param>
         /// <returns></returns>
         public ActionResult Index()
         {

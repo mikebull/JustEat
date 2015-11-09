@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using JustEat.Constants;
 using JustEat.Model;
 using JustEat.Modules;
 using JustEat.Service.Interfaces;
@@ -18,10 +19,10 @@ namespace JustEat.CommandLine
             var outcode = String.Empty;
 
             Console.WriteLine();
-            Console.WriteLine("Please enter your outcode and press return, or press 0 to exit");
+            Console.WriteLine("Please enter your outcode and press return, or type \"{0}\" to exit", Commands.Exit);
             outcode = Console.ReadLine();
             Console.WriteLine();
-            if (outcode == "0") return;
+            if (String.Equals(outcode, Commands.Exit, StringComparison.InvariantCultureIgnoreCase)) return;
 
             int page = 1;
 
@@ -38,11 +39,11 @@ namespace JustEat.CommandLine
                     page++;
 
                     Console.WriteLine();
-                    Console.WriteLine("Press any key to view more, or 0 to exit");
+                    Console.WriteLine("Press any key to view more, or type \"{0}\" to exit", Commands.Exit);
 
                     input = Console.ReadLine();
                     Console.WriteLine();
-                    if (input == "0")
+                    if (String.Equals(input, Commands.Exit, StringComparison.InvariantCultureIgnoreCase))
                     {
                         return;
                     }
@@ -91,7 +92,7 @@ namespace JustEat.CommandLine
         /// Render restaurant information onto console
         /// </summary>
         /// <param name="restaurant"></param>
-        public static void DisplayRestaurant(Restaurant restaurant)
+        private static void DisplayRestaurant(Restaurant restaurant)
         {
             Console.WriteLine(restaurant.Name);
             Console.WriteLine("Rated: {0} stars from {1} reviews", restaurant.RatingStars, restaurant.NumberOfRatings);

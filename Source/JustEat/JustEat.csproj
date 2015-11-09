@@ -52,6 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Constants\Commands.cs" />
     <Compile Include="Constants\Paging.cs" />
     <Compile Include="Factory\Interfaces\IClientFactory.cs" />
     <Compile Include="Factory\Interfaces\IRequestFactory.cs" />
