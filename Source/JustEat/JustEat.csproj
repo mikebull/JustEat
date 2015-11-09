@@ -32,6 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Ninject">
+      <HintPath>..\..\Solution\packages\Ninject.3.2.2.0\lib\net45-full\Ninject.dll</HintPath>
+    </Reference>
     <Reference Include="PagedList">
       <HintPath>..\..\Solution\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
     </Reference>
@@ -48,6 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Constants\Constants.cs" />
     <Compile Include="Factory\Interfaces\IClientFactory.cs" />
     <Compile Include="Factory\Interfaces\IRequestFactory.cs" />
     <Compile Include="Factory\RestaurantApiClientFactory.cs" />
@@ -55,6 +59,7 @@
     <Compile Include="Model\CuisineType.cs" />
     <Compile Include="Model\RequestRoot.cs" />
     <Compile Include="Model\Restaurant.cs" />
+    <Compile Include="Modules\BusinessLogicModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service\Interfaces\IJustEatApiService.cs" />
     <Compile Include="Service\JustEatApiService.cs" />
