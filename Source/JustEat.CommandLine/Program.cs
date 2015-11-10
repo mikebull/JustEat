@@ -82,22 +82,13 @@ namespace JustEat.CommandLine
 
             foreach (var restaurant in restaurants)
             {
-                DisplayRestaurant(restaurant);
+                Console.WriteLine(restaurant.Name);
+                Console.WriteLine("Rated: {0} stars from {1} reviews", restaurant.RatingStars, restaurant.NumberOfRatings);
+                Console.WriteLine("Cuisine Served: " + String.Join(", ", restaurant.CuisineTypes.Select(type => type.Name)));
+                Console.WriteLine();
             }
 
             return true;
-        }
-
-        /// <summary>
-        /// Render restaurant information onto console
-        /// </summary>
-        /// <param name="restaurant"></param>
-        private static void DisplayRestaurant(Restaurant restaurant)
-        {
-            Console.WriteLine(restaurant.Name);
-            Console.WriteLine("Rated: {0} stars from {1} reviews", restaurant.RatingStars, restaurant.NumberOfRatings);
-            Console.WriteLine("Cuisine Served: " + String.Join(", ", restaurant.CuisineTypes.Select(type => type.Name)));
-            Console.WriteLine();
         }
     }
 }
